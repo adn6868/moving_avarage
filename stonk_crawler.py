@@ -53,7 +53,13 @@ if __name__ == '__main__':
 	except FileExistsError:	
 		print("Directory " , 'dat' ,  " already exists")
 
-	symbol_list = ['VNM', 'BHT', 'FLC', 'SSI', 'CTD', 'HBC']
+	vn30 = open ('vn30.input','r')
+	symbol_list = []
+	for line in vn30:
+		symbol_list.append(line.strip('\n'))
+	# symbol_list = ['NRE' , 'VPB' , 'VNM' , 'VJC' , 'VIC' , 'VHM' , 'VCB' , 'TPB' , 'TCH' , 'TCB' , 'STB' , 'SSI' , 'SBT' , 'REE' , 'POW' , 'PNJ' , 'PLX' , 'PDR' , 'NVL' , 'MWG' , 'MSN' , 'MBB' , 'KDH' , 'HPG' , 'HDB' , 'GAS' , 'FPT' , 'CTG' , 'BVH' , 'BID']
+
+	# symbol_list =['TCB']
 
 	for symbol in symbol_list:
 		try:
