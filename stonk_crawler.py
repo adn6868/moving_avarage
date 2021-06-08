@@ -53,7 +53,7 @@ if __name__ == '__main__':
 	except FileExistsError:	
 		print("Directory " , 'dat' ,  " already exists")
 
-	symbol_list = ['VNM', 'BHT', 'FLC', 'SSI']
+	symbol_list = ['VNM', 'BHT', 'FLC', 'SSI', 'CTD', 'HBC']
 
 	for symbol in symbol_list:
 		try:
