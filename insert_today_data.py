@@ -36,7 +36,7 @@ for symbol in symbol_list:
         sql_query = "INSERT INTO tblMarket (SYMBOL, TIME, OPEN, HIGH, LOW, CLOSE, VOLUME) VALUES (%s, %s, %s, %s, %s ,%s ,%s)"
         for i in range(length):
             val = (symbol, from_timestamp_to_sql_format(
-                data['t'][i]), data['o'][i], data['h'][i], data['l'][i], dataThat['c'][i], data['v'][i])
+                data['t'][i]), data['o'][i], data['h'][i], data['l'][i], data['c'][i], data['v'][i])
             try:
                 mycursor.execute(sql_query, val)
                 mydb.commit()
